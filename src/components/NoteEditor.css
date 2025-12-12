@@ -1,0 +1,109 @@
+.note-editor {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.note-editor-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.note-editor-title {
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0;
+  color: #333;
+  background: transparent;
+}
+
+.note-editor-title::placeholder {
+  color: #bbb;
+}
+
+.note-editor-meta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.note-editor-content {
+  flex: 1;
+  padding: 1.5rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  resize: none;
+  font-family: inherit;
+  background: transparent;
+}
+
+.note-editor-content::placeholder {
+  color: #bbb;
+}
+
+/* 스크롤바 스타일링 */
+.note-editor-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.note-editor-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.note-editor-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.note-editor-content::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+@media (max-width: 768px) {
+  .note-editor {
+    max-width: 100%;
+  }
+
+  .note-editor-header {
+    padding: 1rem;
+  }
+
+  .note-editor-title {
+    font-size: 1.5rem;
+  }
+
+  .note-editor-content {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .note-editor-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .note-editor-title {
+    font-size: 1.2rem;
+  }
+
+  .note-editor-content {
+    font-size: 0.9rem;
+  }
+}
+
